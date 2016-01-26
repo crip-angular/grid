@@ -1,14 +1,14 @@
-# AngularJS crip grid module
+# Crip Angular grid module
 
-For more details [see Demo repository](https://github.com/crip-angular/demo)
+For more details [see demo repository](https://github.com/crip-angular/demo)
 
 ### Dependencies
 
-1. AngularJS crip core module ([crip.core](https://github.com/crip-angular/core))
+1. Crip Angular core module ([crip.core](https://github.com/crip-angular/core))
 
 ### Plugins
 
-1. AngularJS crip grid url plugin ([crip.grid.url](https://github.com/crip-angular/grid-url))
+1. Crip Angular grid url plugin ([crip.grid.url](https://github.com/crip-angular/grid-url))
 
 ### Configuration
 
