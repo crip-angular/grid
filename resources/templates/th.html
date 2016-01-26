@@ -1,0 +1,6 @@
+<a href title="{{cripTitle}}"
+   ng-click="cripGridTh.sortBy(cripName)">
+    <i class="crip-icon fa pull-right"
+       ng-class="{'fa-sort-desc': cripGridTh.isDescFor(cripName),
+                  'fa-sort-asc': cripGridTh.isAscFor(cripName)}"></i> <span ng-transclude></span>
+</a>

@@ -1,0 +1,28 @@
+{
+  "name": "crip-grid",
+  "version": "1.0.0",
+  "description": "AngularJS crip grid module",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crip-angular/grid.git"
+  },
+  "keywords": [
+    "angular",
+    "grid"
+  ],
+  "author": "Igors Krasjukovs <tahq69@gmail.com> (https://github.com/tahq69)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/crip-angular/grid/issues"
+  },
+  "homepage": "https://github.com/crip-angular/grid#readme",
+  "dependencies": {
+    "gulp": "^3.9.0",
+    "gulp-angular-templatecache": "^1.8.0",
+    "cripweb": "^1.0.0"
+  }
+}
