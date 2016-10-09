@@ -1,8 +1,8 @@
-var gulp = require('gulp'),
-    crip = require('cripweb'),
-    templateCache = require('gulp-angular-templatecache');
+var gulp = require('gulp');
+var cripweb = require('cripweb');
+var templateCache = require('gulp-angular-templatecache');
 
-gulp.task('watch-angular-templates', function () {
+gulp.task('angular-templates', function () {
     return gulp.src('resources/templates/**/*.html')
         .pipe(templateCache('templates.js', {
             module: 'crip.grid.templates',
@@ -14,22 +14,9 @@ gulp.task('watch-angular-templates', function () {
         .pipe(gulp.dest('resources/templates'));
 });
 
-crip.scripts([
-        '**/*.module.js',
-        '**/*.js'
-    ],
-    'crip-grid',
-    'scripts',
-    'resources',
-    'build');
+cripweb(gulp)(function (crip) {
+    crip.config.set('scripts', { base: 'resources', output: 'build' });
 
-crip.addWatch(
-    './resources/templates/**/*.html',
-    'watch-angular-templates',
-    gulp
-);
-
-gulp.task('default', function () {
-    crip.gulp.start('crip-default');
-    crip.watch();
+    crip.scripts('crip-grid', ['**/*.module.js', '**/*.js'], true)
+        .watch('angular-templates', './resources/templates/**/*.html', ['angular-templates']);
 });
